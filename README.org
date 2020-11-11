@@ -15,9 +15,9 @@
 - 抓包工具
 - 知识管理
 ** 编程语言
-- scala
-- python
-- ocaml
+- Scala
+- Python
+- Ocaml
 ** 系统设计
 - 机器学习平台
 - 数据仓库
