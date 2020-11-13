@@ -10,7 +10,7 @@
 - 消息队列
 - 机器学习
 - RPC框架
-- [可视化](/tools/visualization/README.org)
+- [[tools/visualization/README.org][可视化]]
 
 ** 支撑体系
 - 抓包工具
