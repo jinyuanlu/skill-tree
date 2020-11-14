@@ -1,0 +1,4 @@
+* Math guideline
+- 概率论
+- 统计学
+- 范畴论
