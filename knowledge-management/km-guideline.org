@@ -1,2 +1,4 @@
 * Knowledge Management
 - Org-mode
+- Latex
+- Confluence
