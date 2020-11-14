@@ -1,6 +1,7 @@
 * skill-tree
 ** 知识体系
 - 数学
+- 元学习
 ** 技能工具
 - 实时分析
 - 负载均衡
@@ -14,7 +15,7 @@
 
 ** 支撑体系
 - 抓包工具
-- 知识管理
+- [[knowledge-management/km-guideline.org][知识管理]]
 ** 编程语言
 - Scala
 - Python
