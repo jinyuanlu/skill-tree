@@ -1,0 +1,3 @@
+* Log system guideline
+- Logstash
+- Flume
