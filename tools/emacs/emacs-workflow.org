@@ -12,3 +12,6 @@
 ** Magit
 - *git Status*: SPC g g
 - *checkout branch*: SPC g b
+** Navigator
+- *go to definition*: SPC c d
+- *go to reference*: SPC c D
