@@ -31,6 +31,3 @@
 - 数据仓库
 - 数据分析平台
 - 服务网格
-* Books
-** 系统设计
-- <The Engineering Design of Systems: Models and Methods>
