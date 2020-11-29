@@ -1,4 +1,11 @@
 * Doom Emacs Workflow
+** Workspace
+ - *open project for workspace*: SPC p p
+ - *list workspace*: SPC-TAB .
+ - *swithc to buffer of current workspace*: SPC ,
+ - *find files in current workspace*: SPC SPC
+ - *recently open file*: SPC fr
+
 ** Undo & Redo
 - *undo*: u
 - *redo*: C-r
