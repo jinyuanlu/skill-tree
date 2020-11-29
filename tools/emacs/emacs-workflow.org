@@ -1,4 +1,5 @@
 * Doom Emacs Workflow
+[[https://github.com/hlissner/doom-emacs/blob/develop/modules/config/default/+evil-bindings.el][default-key-bindings]]
 ** Workspace
  - *open project for workspace*: SPC p p
  - *list workspace*: SPC-TAB .
@@ -15,3 +16,5 @@
 ** Navigator
 - *go to definition*: SPC c d
 - *go to reference*: SPC c D
+** Text
+- *comment | uncomment*: gcc
