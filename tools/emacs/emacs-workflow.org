@@ -9,3 +9,6 @@
 ** Undo & Redo
 - *undo*: u
 - *redo*: C-r
+** Magit
+- *git Status*: SPC g g
+- *checkout branch*: SPC g b
