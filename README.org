@@ -18,6 +18,7 @@
 - 容器编排
 
 ** 支撑体系
+- [[/tools/emacs/emacs-workflow.org][Emacs]]
 - 操作系统
 - 抓包工具
 - [[knowledge-management/km-guideline.org][知识管理]]

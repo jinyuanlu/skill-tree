@@ -1,0 +1,4 @@
+* Doom Emacs Workflow
+** Undo & Redo
+- *undo*: u
+- *redo*: C-r
