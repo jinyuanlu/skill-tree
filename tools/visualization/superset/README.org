@@ -1,0 +1,15 @@
+* Superset notes
+** 权限管理
+*** Gamma + Charts + Dashboards
+ - database access on [tablename]
+ - can show on DatabaseView
+ - can list on DatabaseView
+ - can list on QueryView
+ - can list on TableModelView
+ - can tables on Superset
+ - can stop query on Superset
+ - can schemas on Superset
+ - can result on Superset
+ - can expore json on Superst(缺少此项Dashboards中看不到东西)
+ - can fetch datasource metadata on Superset
+ - can csv on Superset
