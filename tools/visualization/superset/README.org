@@ -15,4 +15,4 @@
  - can csv on Superset
 ** Druid query timezone
 - druid datasource offset -> 8
-- superset/config: ==DRUID_TZ = tz.tzoffset('GMT+8', 28800)==
+- superset/config: =DRUID_TZ = tz.tzoffset('GMT+8', 28800)=
