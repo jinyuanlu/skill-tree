@@ -1,0 +1,21 @@
+* Machine Learning Platform Design
+** Data pipeline
+*** Sourcing
+**** Log collect
+***** Client log
+***** Service log
+**** Sync
+***** Mysql to Kafka
+***** Log database to Kafka
+*** Transform
+**** Batch
+**** Streaming
+*** Sink
+**** Kafka to Hive
+**** Kafka to Hbase
+**** Hbase to ElasticSearch
+
+** Recommend Engine
+** Serving
+*** Pull pattern
+*** Push Pattern

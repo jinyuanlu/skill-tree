@@ -13,3 +13,6 @@
  - can expore json on Superst(缺少此项Dashboards中看不到东西)
  - can fetch datasource metadata on Superset
  - can csv on Superset
+** Druid query timezone
+- druid datasource offset -> 8
+- superset/config: src_python{DRUID_TZ = tz.tzoffset('GMT+8', 28800)}

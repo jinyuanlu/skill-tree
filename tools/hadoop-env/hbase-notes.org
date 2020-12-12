@@ -1,5 +1,7 @@
-** 167. HBase Snapshots
+** HBase Snapshots
 - Snapshot allow you to take a copy of table with a very small performance effect.
 - Snapshot is a immutable collection of hfile and metadata.
 - Both "clone" and "restore" do not require any data to be copied cause the underlying Hfiles stay unchanged.
 - "export" snapshot to remote cluster has little impact on RegionServer of the local clutster.
+** Access to remote hbase snapshot from current EMR Hadoop cluster
+- Create
