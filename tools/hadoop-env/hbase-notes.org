@@ -5,3 +5,7 @@
 - "export" snapshot to remote cluster has little impact on RegionServer of the local clutster.
 ** Access to remote hbase snapshot from current EMR Hadoop cluster
 - Create
+** Alter COMPRESSION
+- =describe 'table_name'=
+- =alter 'table_name',NAME => 'family_name', COMPRESSION => 'snappy'=
+- =major_compact 'table_name'=
