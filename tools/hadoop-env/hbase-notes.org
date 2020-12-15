@@ -6,6 +6,6 @@
 ** Access to remote hbase snapshot from current EMR Hadoop cluster
 - Create
 ** Alter COMPRESSION
-- =describe 'table_name'=
-- =alter 'table_name',NAME => 'family_name', COMPRESSION => 'snappy'=
-- =major_compact 'table_name'=
+- describe 'table_name'
+- alter 'table_name',NAME => 'family_name', COMPRESSION => 'snappy'
+- major_compact 'table_name'
