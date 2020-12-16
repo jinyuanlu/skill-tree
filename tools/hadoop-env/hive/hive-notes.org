@@ -1,0 +1,22 @@
+* Hive notes
+** Grant
+*** Modify hive-site.xml
+- hive.security.authorization.enabled: true
+- hive.users.in.admin.role: hive
+- hive.security.authorization.createtable.owner.grants: ALL
+*** login in hive shell as 'hive', which is set above
+- =set role admim;=
+*** create role & grant role
+- =CREATE ROLE role_test;=
+- =grant SELECT,SHOW_DATABASE on database database_name to role role_test;=
+*** grant role to user
+- =grant role role_test to user user_name;=
+*** connect as a client
+- =beeline -u jdbc:hive2://localhost:10000 -p user_name -p some_password;=
+*** other useful command
+- drop role: =drop role role_name;=;
+- show role: =show roles;=
+- check grant on roles: =show grant role role_name on database db_name;=
+- check grant on user: =show grant user [username] on [database|table] [db_name|tbl_name];=
+*** reference
+- [[https://cwiki.apache.org/confluence/display/Hive/SQL+Standard+Based+Hive+Authorization?spm=a2c4g.11186623.2.20.67b43768WPcLUz][official-doc]]
