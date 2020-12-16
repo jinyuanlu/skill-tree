@@ -20,3 +20,5 @@
 - check grant on user: =show grant user [username] on [database|table] [db_name|tbl_name];=
 *** reference
 - [[https://cwiki.apache.org/confluence/display/Hive/SQL+Standard+Based+Hive+Authorization?spm=a2c4g.11186623.2.20.67b43768WPcLUz][official-doc]]
+** Hook
+- hive.exec.pre.hooks
