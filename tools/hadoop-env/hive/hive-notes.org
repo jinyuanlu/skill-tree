@@ -8,7 +8,7 @@
 - =set role admim;=
 *** create role & grant role
 - =CREATE ROLE role_test;=
-- =grant SELECT,SHOW_DATABASE on database database_name to role role_test;=
+- =grant SELECT,INSERT on database database_name to role role_test;=
 *** grant role to user
 - =grant role role_test to user user_name;=
 *** connect as a client
