@@ -1,2 +1,2 @@
 * Distributed Storage
-- [[/hbase/hbase-notes.org][hbase]]
+- [[hbase/hbase-notes.org][hbase]]
