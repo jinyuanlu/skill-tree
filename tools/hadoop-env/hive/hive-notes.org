@@ -5,7 +5,7 @@
 - hive.users.in.admin.role: hive
 - hive.security.authorization.createtable.owner.grants: ALL
 *** login in hive shell as 'hive', which is set above
-- =set role admim;=
+- =set role admin;=
 *** create role & grant role
 - =CREATE ROLE role_test;=
 - =grant SELECT,INSERT on database database_name to role role_test;=
