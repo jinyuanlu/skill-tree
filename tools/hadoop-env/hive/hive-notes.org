@@ -20,5 +20,17 @@
 - check grant on user: =show grant user [username] on [database|table] [db_name|tbl_name];=
 *** reference
 - [[https://cwiki.apache.org/confluence/display/Hive/SQL+Standard+Based+Hive+Authorization?spm=a2c4g.11186623.2.20.67b43768WPcLUz][official-doc]]
-** Hook
+*** alternative
+- [[https://ranger.apache.org/][apache ranger]]
+** Hive Hook
 - hive.exec.pre.hooks
+- hive.exec.post.hooks
+- hive.exec.failure.hooks
+- hive.metastore.init.hooks
+- hive.exec.driver.run.hooks
+- hive.semantic.analyzer.hook
+
+** Metastore Listeners
+- hive.metastore.pre.event.listeners
+- hive.metastore.event.listeners
+- hive.metastore.end.function.listeners
