@@ -1,0 +1,6 @@
+* GRPC notes
+** gRPC streaming services vs. repeated fields
+- The overall size of the dataset, constrained or unconstrained? When the message objects in your datasets are potentially very large, it's best for you transfer them by using streaming requests or responses. It's more efficient to construct a large object in memory, write it to the network, and then free up the resources. This approach will improve the scalability of your service.
+- The time it took to create the dataset at either the client or server end. If the client needs all the data before starting to process it and the dataset is small enough to construct in memory, then consider using a repeated field.
+- Whether the consumer of the dataset can start acting on it as soon as the first item is available, or needs the complete dataset to do anything useful.
+- ref: [[https://docs.microsoft.com/en-us/dotnet/architecture/grpc-for-wcf-developers/streaming-versus-repeated][links]]
