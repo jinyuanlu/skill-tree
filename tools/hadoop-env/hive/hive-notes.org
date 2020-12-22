@@ -22,6 +22,7 @@
 - [[https://cwiki.apache.org/confluence/display/Hive/SQL+Standard+Based+Hive+Authorization?spm=a2c4g.11186623.2.20.67b43768WPcLUz][official-doc]]
 *** alternative
 - [[https://ranger.apache.org/][apache ranger]]
+
 ** Hive Hook
 - hive.exec.pre.hooks
 - hive.exec.post.hooks

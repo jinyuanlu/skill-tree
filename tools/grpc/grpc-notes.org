@@ -4,3 +4,6 @@
 - The time it took to create the dataset at either the client or server end. If the client needs all the data before starting to process it and the dataset is small enough to construct in memory, then consider using a repeated field.
 - Whether the consumer of the dataset can start acting on it as soon as the first item is available, or needs the complete dataset to do anything useful.
 - ref: [[https://docs.microsoft.com/en-us/dotnet/architecture/grpc-for-wcf-developers/streaming-versus-repeated][links]]
+** Performance best practices with gRPC
+- Reuse gRPC channels
+- Connection concurrency.HTTP/2 connections typically have a limit on the number of [[https://httpwg.org/specs/rfc7540.html#rfc.section.5.1.2][maximum concurrent streams (active HTTP requests)]] on a connection at one time. By default, most servers set this limit to 100 concurrent streams.
