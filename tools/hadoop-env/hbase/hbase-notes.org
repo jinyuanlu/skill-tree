@@ -4,8 +4,66 @@
 - Both "clone" and "restore" do not require any data to be copied cause the underlying Hfiles stay unchanged.
 - "export" snapshot to remote cluster has little impact on RegionServer of the local clutster.
 ** Access to remote hbase snapshot from current EMR Hadoop cluster
-- Create
+Say you want to do this inside spark session.
+*** create external table
+#+BEGIN_SRC python
+def create_table(self, hbase_table_name: str, hive_table_name: str):
+    sql = self._get_sql(hbase_table_name, hive_table_name)
+
+    command = """
+    sql="{sql}"
+    echo -e $sql | env HIVE_OPTS="-hiveconf hbase.zookeeper.quorum={quorum}" hive
+    """.format(sql=sql, quorum=self.zookeeper_quorum)
+    subprocess.run(command, shell=True, check=True)
+
+#+END_SRC
+*** create hbase snapshot
+#+BEGIN_SRC python
+HBASE_SHELL_CMD = "hbase --config {config_file_path} shell -n".format(config_file_path=PROJECT_PATH + "/hive/shell_config/")
+def create_snapshot(self, hbase_table_name: str, hive_table_name: str):
+    command = """
+    echo "snapshot '{hbase_table_name}', '{hive_table_name}', {{SKIP_FLUSH => false}}" | {hbase_shell_cmd}
+    """.format(hbase_table_name=hbase_table_name, hive_table_name=hive_table_name, hbase_shell_cmd=self.HBASE_SHELL_CMD)
+
+    subprocess.run(command, shell=True, check=True)
+#+END_SRC
+*** config spark session
+#+BEGIN_SRC python
+    spark_session.sql("set hbase.zookeeper.quorum={quorum}".format(quorum=self.zookeeper_quorum))
+    spark_session.sql("set hbase.rootdir=/hbase")
+    spark_session.sql("set hive.hbase.snapshot.name={hive_table_name}".format(hive_table_name=hive_table_name))
+    spark_session.sql("set hive.hbase.snapshot.restoredir=/tmp/hbase_snapshots/{hive_table_name}"
+                        .format(hive_table_name=hive_table_name))
+
+#+END_SRC
+*** do somethine
+#+BEGIN_SRC python
+df: DataFrame = spark_session.sql("select * from {table_name}".format(table_name=hive_table_name)) \
+                             .repartition(200)
+
+#+END_SRC
+*** drop snapshot
+#+BEGIN_SRC python
+def delete_snapshot(self, hive_table_name: str):
+    command = """
+    echo "delete_snapshot '{hive_table_name}'" | {hbase_shell_cmd}
+    """.format(hive_table_name=hive_table_name, hbase_shell_cmd=self.HBASE_SHELL_CMD)
+
+    subprocess.run(command, shell=True, check=True)
+
+def _delete_table(self, hive_table_name: str):
+    sql = "drop table {hive_table_name};".format(hive_table_name=hive_table_name)
+
+    command = """
+    sql="{sql}"
+    echo -e $sql | hive
+    """.format(sql=sql)
+
+    subprocess.run(command, shell=True, check=True)
+#+END_SRC
+
 ** Alter COMPRESSION
 - describe 'table_name'
 - alter 'table_name',NAME => 'family_name', COMPRESSION => 'snappy'
 - major_compact 'table_name'
+** Coprocessor
