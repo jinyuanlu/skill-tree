@@ -1,4 +1,4 @@
 * Japanese Notes
 ** Dict
-- [[http://ebstudio.info/manual/EBMac/][EBwin Dict Loader]]
+- [[http://ebstudio.info/manual/EBMac/][EB-Mac]]
 - [[https://downloads.freemdict.com/100G_Super_Big_Collection/EBwin%E8%AF%8D%E5%85%B8/][Dict Collection]]
