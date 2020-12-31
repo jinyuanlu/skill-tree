@@ -18,3 +18,5 @@
 - *go to reference*: SPC c D
 ** Text
 - *comment | uncomment*: gcc
+** File
+- *open html file in browser*: SPC o b
