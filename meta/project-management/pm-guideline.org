@@ -1,2 +1,2 @@
 * Project Management Guideline
-** [[newbie-notes.org][Newbie guide notes]]
+- [[newbie-notes.org][Newbie guide notes]]
