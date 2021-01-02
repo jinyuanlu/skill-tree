@@ -1,0 +1,31 @@
+* 1.代码规范建议
+请谨记你首先是一名工程师，才是其他的，所以请一定保持住工程师的尊严和自我修养，尽量不要往代码库里写一些缺乏考虑和设计的垃圾代码。
+下面一些通用的原则和方法，请大家相互督促共勉。
+- [[https://en.wikipedia.org/wiki/Don%27t_repeat_yourself][DRY]]。每个功能在系统中仅有唯一实现。
+- [[https://en.wikipedia.org/wiki/Occam%27s_razor][奥卡姆剃刀]]。如无必要，勿增实体。
+- 勒布朗（LeBlanc）法则。稍后等于永不，在写TODO时好好掂量。
+- 代码先是写给人看的，后才是给机器看的，保持代码意图清晰易读，简洁明了。
+- 遵循[[https://zh.wikipedia.org/wiki/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91][TDD]]思想，避免写不可测试的代码，倒逼优化代码结构。
+- 命名要有意义、好区分、易搜索。命名的过程也是抽象的过程。
+- 函数尽可能短，不要超过60行。
+- 函数参数尽量少，大于3个时可考虑封装成类。
+- 尽量写[[https://en.wikipedia.org/wiki/Pure_function][纯函数]]。
+- Python遵循PEP8规范，Scala遵循[[https://github.com/databricks/scala-style-guide/blob/master/README-ZH.md][databricks]]规范。
+参考书目：《代码大全》、《代码整洁之道》
+* 2.JIRA Workflow
+我们使用jira做需求和迭代生命周期管理，以便回溯、统计和考评。
+- 一个sprint周期为1周，有上级主管控制迭代开关。
+- 由产品或上级提出需求，由上级主管分配需求和完成时间。
+- 需求方或经办人可按需求功能点划分子需求，原则上子需求周期不大于4小时。
+- 需求状态要及时变更，方便其他相关人员在看板查看完成进度。
+- 不能私自接没有经过评审的需求。
+* 3.Git Workflow
+我们使用Gitlab管理代码。
+首先你应该知道Git的基本操作，比如[[http://www.ruanyifeng.com/blog/2015/08/git-use-process.html][这里]]提到的。另外有一些需要强调的：
+- develop为开发分支；master为线上发布分支。
+- 接到需求先从master checkout出新的分支，开发完毕后合并入develop分支。
+- 线上bug先从master checkout出新的分支，修复完毕后合并入develop分支。
+- 每次commit遵循少量多次原则，每次提交以一个小的可回溯的功能点为单位。
+- commit message应遵循格式: <type>(<scope>): <subject>。参考[[https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines][Angular]]规范。
+- develop合并入master分支仅由有权限的人操作。
+- 代码上线前需发邮件给运维组、研发部负责人及相关业务方，周知更新内容，待各方确认无误后方可上线。
