@@ -28,7 +28,7 @@
 - Python
 - Ocaml
 ** 系统设计
-- 数据与算法中台
+- 数据与算法中台(Data&Algor Center)
 - 服务网格
 ** 语言工具
 - English
