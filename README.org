@@ -1,8 +1,9 @@
 * skill-tree
-** 知识体系
+** 基础知识
 - 数学
 - 元学习
-- [[meta/project-management/pm-guideline.org][项目管理]]
+- [[meta/project-management/pm-guideline.org][项目管理(Project Management)]]
+- 系统工程(MBSE)
 - [[/meta/economic/economic-notes.org][经济学]]
 ** 技能工具
 - 实时分析
