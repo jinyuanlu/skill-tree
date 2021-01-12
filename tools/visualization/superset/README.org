@@ -14,5 +14,9 @@
  - can fetch datasource metadata on Superset
  - can csv on Superset
 ** Druid query timezone
+*** version 0.28.1:
 - druid datasource offset -> 8
 - superset/config.py: =DRUID_TZ = tz.tzoffset('GMT+8', 28800)=
+*** version 0.37.2:
+Foregoing method did not work anymore cause the query use the same datasource interface(connectors/sqla.py => query) now. NOT the druid connector model any more.
+- make a new calculated column derived from =__time=: =__time + INTERVAL '8' hour=
