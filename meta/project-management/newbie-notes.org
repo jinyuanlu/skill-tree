@@ -22,10 +22,13 @@
 * 3.Git Workflow
 我们使用Gitlab管理代码。
 首先你应该知道Git的基本操作，比如[[http://www.ruanyifeng.com/blog/2015/08/git-use-process.html][这里]]提到的。另外有一些需要强调的：
-- develop为开发分支；master为线上发布分支。
+- develop为开发分支, 始终保持最新完成以及bug修复后的代码。
+- release为预发布分支，发布提测阶段，会release分支代码为基准提测。
+- master为主分支，始终与线上代码一致。
 - 接到需求先从master checkout出新的分支，开发完毕后合并入develop分支。
 - 线上bug先从master checkout出新的分支，修复完毕后合并入develop分支。
+- 一切就绪时，代码合入release等待发布。
 - 每次commit遵循少量多次原则，每次提交以一个小的可回溯的功能点为单位。
 - commit message应遵循格式: <type>(<scope>): <subject>。参考[[https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines][Angular]]规范。
-- develop合并入master分支仅由有权限的人操作。
+- 代码合并入master分支仅由有权限的人操作。
 - 代码上线前需发邮件给运维组、研发部负责人及相关业务方，周知更新内容，待各方确认无误后方可上线。
