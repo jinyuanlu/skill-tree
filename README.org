@@ -20,7 +20,7 @@
 
 ** 支撑体系
 - [[/tools/emacs/emacs-workflow.org][Emacs]]
-- 操作系统
+- [[/os/os-guideline.org][操作系统]]
 - 抓包工具
 - [[knowledge-management/km-guideline.org][知识管理]]
 - 工单系统
