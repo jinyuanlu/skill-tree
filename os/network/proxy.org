@@ -1,5 +1,8 @@
 * Tools
 - [[https://github.com/rofl0r/proxychains-ng][proxichains-ng]]
   * modify config: =/usr/local/etc/proxychains.conf=
-  * add shortcut: =echo -e 'alias pc="proxychains4"' >> ~/.zshrc && source ~/.zshrc=
+  * add shortcut:
+    #+BEGIN_SRC bash
+     echo -e 'alias pc="proxychains4"' >> ~/.zshrc && source ~/.zshrc
+    #+END_SRC
   * usage: =pc curl cip.cc=
