@@ -67,3 +67,34 @@ def _delete_table(self, hive_table_name: str):
 - alter 'table_name',NAME => 'family_name', COMPRESSION => 'snappy'
 - major_compact 'table_name'
 ** Coprocessor
+** Monitor
+*** HMaster
+**** Server Response Time
+- HBase_Master_IPC_TotalCallTime_99th_percentile
+**** GC
+- HBase_JvmMetrics_GcCount
+- HBase_JvmMetrics_GcTimeMillis
+*** HRegionServer
+**** RPC
+- HBase_RegionServer_IPC_TotalCallTime_99th_percentile
+- HBase_RegionServer_IPC_ProcessCallTime_99
+- HBase_RegionServer_IPC_QueueCallTime_99th_percentile
+- HBase_RegionServer_IPC_numActiveWriteHandler
+- HBase_RegionServer_IPC_numActiveScanHandler
+- HBase_RegionServer_IPC_numCallsInGeneralQueue
+- HBase_RegionServer_IPC_numOpenConnections
+**** Request
+- HBase_RegionServer_Server_ScanTime_99th_percentile
+- HBase_RegionServer_IO_FsReadTime_99th_percentile
+
+**** Memory
+- HBase_JvmMetrics_GcTimeMillis
+- HBase_JvmMetrics_GcCount
+- HBase_RegionServer_Server_PauseTimeWithoutGc_99th_percentile
+- HBase_RegionServer_Server_memStoreSize
+
+**** High-level Operate
+- HBase_RegionServer_Server_memStoreSize
+- HBase_RegionServer_Server_compactionQueueLength
+- HBase_RegionServer_Server_flushQueueLength
+- hbase.regionserver.regions.storeFileSize
