@@ -94,7 +94,6 @@ def _delete_table(self, hive_table_name: str):
 - HBase_RegionServer_Server_memStoreSize
 
 **** High-level Operate
-- HBase_RegionServer_Server_memStoreSize
 - HBase_RegionServer_Server_compactionQueueLength
 - HBase_RegionServer_Server_flushQueueLength
-- hbase.regionserver.regions.storeFileSize
+- HBase_RegionServer_Server_storeFileSize
