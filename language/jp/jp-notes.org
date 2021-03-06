@@ -2,3 +2,6 @@
 ** Dict
 - [[http://ebstudio.info/manual/EBMac/][EB-Mac]]
 - [[https://downloads.freemdict.com/100G_Super_Big_Collection/EBwin%E8%AF%8D%E5%85%B8/][Dict Collection]]
+** Plugin
+- [[https://foosoft.net/projects/anki-connect/][AnkiConnect]]
+- [[https://foosoft.net/projects/yomichan/#dictionaries][Yomichan]]

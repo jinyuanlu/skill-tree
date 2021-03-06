@@ -35,4 +35,4 @@
 - 服务网格
 ** 语言工具
 - English
-- 日本語
+- [[language/jp/jp-notes.org][日本語]]
