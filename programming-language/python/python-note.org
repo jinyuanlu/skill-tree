@@ -1,0 +1,2 @@
+* Project Setup Tools
+- [[https://pyscaffold.org/en/latest/install.html][pyscaffold]]

@@ -29,6 +29,7 @@
 ** 编程语言
 - Scala
 - Python
+- C++
 - Ocaml
 ** 系统设计
 - 数据与算法中台(Data&Algor Center)
