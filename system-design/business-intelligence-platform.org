@@ -1,0 +1,2 @@
+* Data Metadata Catelog
+[[https://engineering.linkedin.com/blog/2020/datahub-popular-metadata-architectures-explained][Linkedin]]
