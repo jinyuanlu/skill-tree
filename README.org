@@ -32,7 +32,7 @@
 - C++
 - Ocaml
 ** 系统设计
-- 数据与算法中台(Data&Algor Center)
+- [[system-design/business-intelligence-platform.org][数据与算法中台(Data&Algor Center)]]
 - 服务网格
 ** 语言工具
 - English
